@@ -113,9 +113,9 @@ h2 {
 }
 
 .separator {
-  width: 1px;
+  width: 2px;
   background-color: #555;
-  height: 80px;
+  height: 100px;
   margin: 0 20px;
 }
 
@@ -211,6 +211,86 @@ footer {
 
 .about-text{
   flex: 1;
+}
+
+button {
+  position: absolute;
+  top: 10px; /* Ajusta la posición vertical */
+  right: 20px; /* Ajusta la posición horizontal */
+  padding: 10px 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  
+}
+
+/* Estilos del botón en hover */
+button:hover {
+  background-color: #555;
+}
+
+
+/* Modo oscuro */
+.dark-mode {
+  background-color: #121212;
+  color: #f4f4f9;
+}
+
+/* Cambios específicos para elementos en modo oscuro */
+.dark-mode header h1,
+.dark-mode h2,
+.dark-mode h3 {
+  color: #f4f4f9;
+}
+
+.dark-mode .project,
+.dark-mode .skill {
+  background-color: #333;
+  color: #f4f4f9;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .profile{
+  background-color: #333;}
+
+.dark-mode .project:hover,
+.dark-mode .profile:hover,
+.dark-mode .skill:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+.dark-mode .separator {
+  background-color: #aaa;
+}
+
+.dark-mode footer {
+  color: #bbb;
+}
+
+/* Cambia el color de los íconos en modo oscuro */
+.dark-mode i {
+  color: #f4f4f9;
+}
+
+.dark-mode #profile{
+  background-color: #252525;
+}
+
+.dark-mode #contact p{
+  color: #888;
+}
+
+.dark-mode button {
+  background-color: #fff;
+  color: #333;
+}
+
+.dark-mode button:hover {
+  background-color: #ddd;
 }
 
 /* Adaptabilidad para pantallas pequeñas */
