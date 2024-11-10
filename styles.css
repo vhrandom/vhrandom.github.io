@@ -1,0 +1,221 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f9;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+/* Secciones */
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.profile h3 {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+/* Proyectos */
+.project {
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-left: 5px solid #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+/* Enlaces */
+.project a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Estilos para #profile */
+#profile {
+  background-color: #cecece;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.profiles {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.profile {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  color: #777;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none; /* Hacer clic en toda la caja */
+}
+
+.profile:hover {
+  background-color: #777;
+  transform: scale(1.05);
+}
+
+.profile i {
+  font-size: xx-large;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.separator {
+  width: 1px;
+  background-color: #555;
+  height: 80px;
+  margin: 0 20px;
+}
+
+/* Contacto */
+#contact p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* Estilos para skills */
+.skills {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.skill {
+  flex: 1 1 45%;
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  color: #333;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.skill i {
+  font-size: 50px;
+  transition: color 0.3s;
+}
+
+.skill p {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s ease;
+}
+
+.skill:hover {
+  transform: scale(1.05);
+  background-color: #333;
+  color: #fff;
+}
+
+.skill:hover i {
+  color: #fff;
+}
+
+.skill:hover p {
+  visibility: visible;
+  opacity: 1;
+  bottom: -10px;
+  transition: visibility 0.3s, opacity 0.3s ease, bottom 0.3s ease;
+}
+
+#about {
+  position: relative;
+}
+
+/* Estilo para la imagen de la sección Acerca de Mí */
+.about-image {
+  
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  object-fit: cover;
+}
+.about-title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-text{
+  flex: 1;
+}
+
+/* Adaptabilidad para pantallas pequeñas */
+@media (max-width: 600px) {
+  .skill {
+    flex: 1 1 100%;
+  }
+  .about-content {
+    padding-right: 0;
+  }
+  .about-image {
+    position: static;
+    margin: 10px auto;
+    display: block;
+  }
+}
