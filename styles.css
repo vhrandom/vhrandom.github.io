@@ -83,7 +83,7 @@ h2 {
 }
 
 .profile {
-  flex: 1;
+  flex: 1 1 100%;
   text-align: center;
   padding: 20px;
   background-color: #fff;
@@ -91,6 +91,13 @@ h2 {
   color: #777;
   transition: background-color 0.3s ease, transform 0.3s ease;
   text-decoration: none; /* Hacer clic en toda la caja */
+  display: flex;
+  flex-direction: column; /* Alinea el contenido en columna */
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Ajusta el ancho al 100% */
+  max-width: 250px; /* Tamaño máximo para mantener uniformidad */
+  box-sizing: border-box;
 }
 
 .profile:hover {
@@ -102,6 +109,7 @@ h2 {
   font-size: xx-large;
   color: #333;
   transition: color 0.3s;
+  margin-bottom: 10px;
 }
 
 .separator {
@@ -214,8 +222,24 @@ footer {
     padding-right: 0;
   }
   .about-image {
+    width: 150px;
     position: static;
     margin: 10px auto;
     display: block;
   }
+
+  .profiles{
+    flex-direction: column;
+    gap: 20px;
+  }
+  .separator{
+    display: none;
+  }
+
+  .profile{
+    flex: 1 1 30%;
+    max-width: none;
+  }
+
+  
 }
