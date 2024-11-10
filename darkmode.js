@@ -1,8 +1,9 @@
 function toggleDarkMode() {
+    const button = document.querySelector("button"); // Seleccionamos el botón
+  
     document.body.classList.toggle("dark-mode");
   
-    // Cambia el icono y texto del botón
-    const button = document.querySelector("button");
+    // Actualizamos el texto y guardamos la preferencia en localStorage
     if (document.body.classList.contains("dark-mode")) {
       button.innerHTML = "☀️ Modo Claro";
       localStorage.setItem("darkMode", "enabled");
@@ -12,28 +13,32 @@ function toggleDarkMode() {
     }
   }
   
-  // Detecta la preferencia del sistema
+  // Detecta la preferencia guardada y la preferencia del sistema
   function applySystemPreference() {
-    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const savedPreference = localStorage.getItem("darkMode");
-  
-    // Aplica la preferencia guardada del usuario, si existe
+    const button = document.querySelector("button");
+    
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches; // Preferencia del sistema
+    const savedPreference = localStorage.getItem("darkMode"); // Preferencia guardada
+    
     if (savedPreference === "enabled") {
+      // Si el usuario ha habilitado el modo oscuro
       document.body.classList.add("dark-mode");
-      document.querySelector("button").innerHTML = "☀️ Modo Claro";
+      button.innerHTML = "☀️ Modo Claro";
     } else if (savedPreference === "disabled") {
+      // Si el usuario ha deshabilitado el modo oscuro
       document.body.classList.remove("dark-mode");
-      document.querySelector("button").innerHTML = "🌙 Modo Oscuro";
+      button.innerHTML = "🌙 Modo Oscuro";
     } else if (systemPrefersDark) {
-      // Si no hay preferencia guardada, usa la preferencia del sistema
+      // Si no hay preferencia guardada, y el sistema prefiere el modo oscuro
       document.body.classList.add("dark-mode");
-      document.querySelector("button").innerHTML = "☀️ Modo Claro";
+      button.innerHTML = "☀️ Modo Claro";
     } else {
+      // Si no hay preferencia guardada y el sistema prefiere el modo claro
       document.body.classList.remove("dark-mode");
-      document.querySelector("button").innerHTML = "🌙 Modo Oscuro";
+      button.innerHTML = "🌙 Modo Oscuro";
     }
   }
   
-  // Ejecuta la función al cargar la página
-  applySystemPreference();
+  // Ejecuta la función cuando el DOM está completamente cargado
+  document.addEventListener("DOMContentLoaded", applySystemPreference);
   
