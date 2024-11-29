@@ -43,11 +43,7 @@ h2 {
   font-size: 1.8rem;
 }
 
-.profile h3 {
-  color: #333;
-  font-size: 1.2rem;
-  margin-bottom: 5px;
-}
+
 
 /* Proyectos */
 .project {
@@ -96,7 +92,8 @@ h2 {
   align-items: center;
   justify-content: center;
   width: 100%; /* Ajusta el ancho al 100% */
-  max-width: 250px; /* Tamaño máximo para mantener uniformidad */
+  max-width: 2500px; /* Tamaño máximo para mantener uniformidad */
+  max-height: 117px;
   box-sizing: border-box;
 }
 
@@ -110,6 +107,12 @@ h2 {
   color: #333;
   transition: color 0.3s;
   margin-bottom: 10px;
+}
+
+.profile h3 {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
 }
 
 .separator {
@@ -246,7 +249,12 @@ button:hover {
   color: #f4f4f9;
 }
 
-.dark-mode .project,
+.dark-mode .project{
+  background-color: #333;
+  color: #f4f4f9;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  border-left:5px solid #f4f4f9;
+}
 .dark-mode .skill {
   background-color: #333;
   color: #f4f4f9;
